@@ -37,5 +37,4 @@ public class Divida extends EntidadePersistente<Long> {
     @ManyToOne
     @JoinColumn(name = "DEV_ID", nullable = false)
     private Devedor devedor;
-
 }
