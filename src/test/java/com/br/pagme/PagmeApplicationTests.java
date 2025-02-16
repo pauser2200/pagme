@@ -1,4 +1,4 @@
-package com.br.pagme.pagme;
+package com.br.pagme;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

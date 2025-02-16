@@ -1,4 +1,4 @@
-package com.br.pagme.pagme;
+package com.br.pagme;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
