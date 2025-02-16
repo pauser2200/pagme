@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 @SuperBuilder
 public abstract class EntidadePersistente<T extends Serializable> implements Persistable<T> {
