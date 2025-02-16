@@ -6,6 +6,15 @@ spring:
     username: postgres
     password: root
     driverClassName: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 40
+      minimum-idle: 8
+      initialization-fail-timeout: 2000
+      validation-timeout: 3000
+      max-lifetime: 1800000
+      auto-commit: true
+
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   jpa:
@@ -13,7 +22,7 @@ spring:
     properties:
       hibernate:
         hbm2ddl:
-          auto: create-drop
+          ##auto: create
         default_schema: PGM
 
 
