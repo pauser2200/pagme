@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c132dfb3-2c15-427f-ab35-16e8c2e87068" name="Changes" comment="feat:Ajustando .gitIgnore" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c5c544dc-bf5e-40e6-9c73-50e42b297f66" />
+        <option name="url" value="https://github.com/pauser2200/pagme.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/br/pagme/divida/enums/TipoDivida.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2t8DmNOlhnMFt52InmlLz0nJ1mk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Desenvolvimento/projetos/pagme/src/main/java/com/br/pagme/usuario",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "e0cdef15b55857ef5509942a6530e904",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\usuario" />
+      <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\parceladivida" />
+      <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\endereco" />
+      <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\divida" />
+      <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\devedor" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.br.pagme.usuario.repositorio" />
+      <recent name="com.br.pagme.parceladivida.repositorio" />
+      <recent name="com.br.pagme.endereco.repositorio" />
+      <recent name="com.br.pagme.divida.repositorio" />
+      <recent name="com.br.pagme.divida" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PagmeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pagme" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.br.pagme.PagmeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c132dfb3-2c15-427f-ab35-16e8c2e87068" name="Changes" comment="" />
+      <created>1739724968079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739724968079</updated>
+      <workItem from="1739724969986" duration="8377000" />
+      <workItem from="1739735697443" duration="5361000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: Projeto BackEnd inicado - criação das entidades e repositorios.">
+      <option name="closed" value="true" />
+      <created>1739738924637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739738924637</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Projeto BackEnd inicado - criação das entidades e repositorios.">
+      <option name="closed" value="true" />
+      <created>1739739033871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739739033871</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Projeto BackEnd inicado - criação das entidades e repositorios.">
+      <option name="closed" value="true" />
+      <created>1739739187099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739739187099</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:Ajustando .gitIgnore">
+      <option name="closed" value="true" />
+      <created>1739739416188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739739416188</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:Ajustando .gitIgnore">
+      <option name="closed" value="true" />
+      <created>1739739837714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739739837714</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat:Ajustando .gitIgnore">
+      <option name="closed" value="true" />
+      <created>1739741037111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739741037111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: Projeto BackEnd inicado - criação das entidades e repositorios." />
+    <MESSAGE value="feat:Ajustando .gitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:Ajustando .gitIgnore" />
+  </component>
+</project>
