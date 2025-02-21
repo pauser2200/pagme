@@ -22,11 +22,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -73,7 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Desenvolvimento/projetos/pagme/src/main/java/com/br/pagme/usuario",
+    "last_opened_file_path": "D:/Desenvolvimento/projetos/pagme/BackEnd",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,6 +119,7 @@
       <updated>1739724968079</updated>
       <workItem from="1739724969986" duration="8377000" />
       <workItem from="1739735697443" duration="5361000" />
+      <workItem from="1740146651989" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Projeto BackEnd inicado - criação das entidades e repositorios.">
       <option name="closed" value="true" />
