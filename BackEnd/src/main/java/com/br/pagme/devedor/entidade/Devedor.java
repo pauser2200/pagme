@@ -21,6 +21,7 @@ public class Devedor extends EntidadePersistente<Long> {
     private String sobrenome;
     @Column(name = "DEV_CD_TELEFONE", nullable = false, columnDefinition = "VARCHAR(12)")
     private String telefonr;
+
     @ManyToOne
     @JoinColumn(name = "USU_ID")
     private Usuario usuario;

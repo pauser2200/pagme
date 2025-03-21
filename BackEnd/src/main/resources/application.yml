@@ -1,4 +1,23 @@
+server:
+  port: 8000
+  compression:
+    enabled: false
+  servlet:
+    contextPath: /pagme
+    session:
+      cookie:
+        name: pagme
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+    include-exception: false
+
+
 spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
   application:
     name: pagme
   datasource:
@@ -19,12 +38,19 @@ spring:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   jpa:
     open-in-view: false
+    defer-datasource-initialization: true
     properties:
       hibernate:
-        hbm2ddl:
-          ##auto: create
         default_schema: PGM
+        hbm2ddl:
+          #auto: create-drop
+           auto: update
 
-
-
-
+  sql:
+    init:
+      mode: always
+  jwt:
+    public:
+      key: classpath:app.pub
+    private:
+      key: classpath:app.key

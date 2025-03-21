@@ -1,13 +1,12 @@
 package com.br.pagme.usuario.entidade;
 
 import com.br.pagme.EntidadePersistente;
-import jakarta.persistence.AttributeOverride;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,7 +22,13 @@ public class Usuario extends EntidadePersistente<Long> {
     @Column(name = "USU_DS_SENHA", nullable = false, columnDefinition = "VARCHAR(8)")
     private String senha;
 
-    @Column(name = "USU_CD_TOKEN", nullable = false)
-    private String token;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "USR_USUARIOS_ROLES",
+            joinColumns = @JoinColumn(name = "USU_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ROL_ID")
+    )
+    private Set<Role> roles;
 
 }
