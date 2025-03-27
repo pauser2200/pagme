@@ -8,7 +8,7 @@
         <version>3.4.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.br.pagme</groupId>
+    <groupId>br.pagme</groupId>
     <artifactId>pagme</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pagme</name>

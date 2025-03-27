@@ -3,7 +3,7 @@ server:
   compression:
     enabled: false
   servlet:
-    contextPath: /pagme
+    contextPath: /
     session:
       cookie:
         name: pagme
@@ -38,7 +38,7 @@ spring:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   jpa:
     open-in-view: false
-    defer-datasource-initialization: true
+    defer-datasource-initialization: false
     properties:
       hibernate:
         default_schema: PGM
@@ -49,8 +49,9 @@ spring:
   sql:
     init:
       mode: always
-  jwt:
-    public:
-      key: classpath:app.pub
-    private:
-      key: classpath:app.key
+jwt:
+   publickey: classpath:app.pub
+   privatekey: classpath:app.key
+
+springdoc:
+  override-with-generic-response: false
