@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c132dfb3-2c15-427f-ab35-16e8c2e87068" name="Changes" comment="feat:Ajustando .gitIgnore">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/configuracoes/WebConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/conversoes/UsuarioMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/resources/UsuarioResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/servico/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pagme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/PagmeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/PagmeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/entidade/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/br/pagme/usuario/entidade/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/java/com/br/pagme/PagmeApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/src/main.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pagme/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pagme/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +29,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pauser2200/pagme.git",
-    "accountId": "c5c544dc-bf5e-40e6-9c73-50e42b297f66"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pauser2200/pagme.git&quot;,
+    &quot;accountId&quot;: &quot;c5c544dc-bf5e-40e6-9c73-50e42b297f66&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/br/pagme/divida/enums/TipoDivida.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -68,10 +47,10 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2t8DmNOlhnMFt52InmlLz0nJ1mk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,34 +59,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Desenvolvimento/projetos/pagme/BackEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "e0cdef15b55857ef5509942a6530e904",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/projetos/pagme/BackEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e0cdef15b55857ef5509942a6530e904&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desenvolvimento\projetos\pagme\src\main\java\com\br\pagme\usuario" />
@@ -149,8 +128,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -168,6 +147,7 @@
       <workItem from="1741980654109" duration="221000" />
       <workItem from="1742067420559" duration="77000" />
       <workItem from="1742590057006" duration="26000" />
+      <workItem from="1743193115357" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Projeto BackEnd inicado - criação das entidades e repositorios.">
       <option name="closed" value="true" />

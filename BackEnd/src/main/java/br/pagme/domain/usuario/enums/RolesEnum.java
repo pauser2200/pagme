@@ -6,7 +6,7 @@ public enum RolesEnum {
         ADMIN(1L),
         BASIC(2L);
 
-        long roleId;
+        final long roleId;
 
 
     RolesEnum(long roleId) {
