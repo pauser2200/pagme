@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="325d28ee-c952-4322-b16e-d5b562a79627" name="HORUS_LOCAL Mapping">
+      <data-sources db="5481a860-799c-4c9e-bd42-516034f92d57" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="657f7ec8-0816-432c-a35d-996a319ce7d4" name="Horus_local Mapping">
+      <data-sources db="45549e2e-9ea9-4ca8-8f09-a9c7bac2ec0b" ddl="da649ac2-6e65-4eda-a89d-cf10cb75e3f3" />
+      <scope>
+        <node kind="database" negative="1" />
+      </scope>
+    </mapping>
+  </component>
+</project>

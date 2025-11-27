@@ -1,0 +1,47 @@
+.sidebar-scroll-area {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-nav-content {
+  padding-top: 60px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 24px;
+  height: 48px;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color: #0d6efd;
+}
+
+.bi {
+  min-width: 24px;
+  margin-right: 16px;
+  color: inherit;
+}
+
+.link-text {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+:host-context(.sidebar.collapsed) {
+  .link-text {
+    opacity: 0;
+  }
+}

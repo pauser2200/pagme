@@ -1,2 +1,1 @@
-# pagme
-Projeto de cadastro de devedores
+# projeto-horus

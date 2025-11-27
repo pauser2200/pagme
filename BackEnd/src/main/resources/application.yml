@@ -3,10 +3,10 @@ server:
   compression:
     enabled: false
   servlet:
-    contextPath: /
+    contextPath: /horus
     session:
       cookie:
-        name: pagme
+        name: horus
   error:
     include-message: always
     include-binding-errors: always
@@ -19,9 +19,9 @@ spring:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
   application:
-    name: pagme
+    name: horus
   datasource:
-    url: jdbc:postgresql://localhost:5432/pagme_local
+    url: jdbc:postgresql://localhost:5432/horus_local
     username: postgres
     password: root
     driverClassName: org.postgresql.Driver
@@ -41,11 +41,12 @@ spring:
     defer-datasource-initialization: false
     properties:
       hibernate:
-        default_schema: PGM
+        globally_quoted_identifiers: false
+        default_schema: hor
+        ddl-auto: none
         hbm2ddl:
-          #auto: create-drop
-           auto: update
-
+          auto: create-drop
+           #auto: update
   sql:
     init:
       mode: always
@@ -55,3 +56,15 @@ jwt:
 
 springdoc:
   override-with-generic-response: false
+
+app:
+  security:
+    jwt:
+      issuer: horus
+      expires-minutes: 60
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

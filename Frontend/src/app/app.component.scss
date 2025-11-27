@@ -1,0 +1,68 @@
+
+// 1. Nossas variáveis de largura
+$sidebar-width-open: 250px;
+$sidebar-width-closed: 72px;
+
+// 2. O contêiner do Menu
+.sidebar {
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: $sidebar-width-open;
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out;
+  
+}
+
+// 3. A Área de Conteúdo
+main {
+  padding-top: 56px;
+  margin-left: $sidebar-width-open;
+  width: calc(100% - #{$sidebar-width-open});
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+// 4. O ESTADO COLAPSADO
+.sidebar.collapsed {
+  width: $sidebar-width-closed;
+}
+
+main.collapsed {
+  margin-left: $sidebar-width-closed;
+  width: calc(100% - #{$sidebar-width-closed});
+}
+
+
+.sidebar-toggle-button {
+  position: fixed;
+  z-index: 1031;
+  top: 64px;
+  left: 16px;
+
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+.sidebar-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main.full-page {
+  margin-left: 0;
+  width: 100%;
+  padding-top: 0;
+  height: 100vh;
+}

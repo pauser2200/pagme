@@ -1,0 +1,12 @@
+/* * A tag 'nav' dentro do nosso header.component.html
+ * é o nosso alvo.
+ */
+nav {
+  /*
+   * Vamos adicionar uma borda inferior (bottom)
+   * de 1px, sólida, e com uma cor ligeiramente 
+   * mais clara que o fundo 'bg-dark', mas ainda escura.
+   * 'rgba(255, 255, 255, 0.1)' é um branco bem sutil.
+   */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

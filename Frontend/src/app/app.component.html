@@ -1,0 +1,24 @@
+@if(layoutVisible$ | async){
+<ng-container>
+  <app-header></app-header>
+ 
+  @if(!(isSidebarOpen$ | async)){
+  <button class="sidebar-toggle-button" (click)="toggleSidebarApp()">
+    <i class="bi bi-list"></i>
+  </button>
+  }@else {
+  <button class="sidebar-toggle-button" (click)="toggleSidebarApp()">
+    <i class="bi bi-list"></i>
+  </button>
+  }
+
+  <nav class="d-md-block bg-dark sidebar collapse" id="sidebarMenu" [class.collapsed]="!(isSidebarOpen$ | async)">
+    <app-sidebar></app-sidebar>
+  </nav>
+</ng-container>
+}
+
+
+<main [class.collapsed]="!(isSidebarOpen$ | async)" [class.full-page]="!(layoutVisible$ | async)">
+  <router-outlet></router-outlet>
+</main>
