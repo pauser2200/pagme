@@ -4,86 +4,181 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3296c3ee-2945-4606-a2e8-b610cbc2bf20" name="Changes" comment="feat: &#10;Integrção da tela de login com a geração de token JWT vindo do back.&#10;Implementação de corsConfig&#10;Criação dos interceptors de erro&#10;Implementação de timeout do sistema quando o sistema ficar 15 minutos sem iteração do usuário" />
+    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pagme.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/pagme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pagme.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/GerarSenha.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/GerarSenha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/autenticacao/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/autenticacao/AutenticacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/RolesResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/RolesResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/EntidadePersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/EntidadePersistente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/entidades/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/exception/TratadorDeErros.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/exception/TratadorDeErros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/DadosTokenJWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/DadosTokenJWT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/JwtKeysConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/JwtKeysConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/PasswordConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/PasswordConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/UserDetailsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/UserDetailsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/repositpry/usuario/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/repositpry/usuario/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/app.key" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/app.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/app.pub" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/app.pub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.config.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/interceptor/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptor/auth.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/interceptor/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptor/error.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/alert.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/alert.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/sidebar.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/sidebar.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/models/produto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/produto.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/produto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/produto.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/shared/componentes/alert.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/componentes/alert.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.spec.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="horus/invalid/JPA" />
-    </ignored-facets>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Desenvolvimento\repository" />
-        <option name="userSettingsFile" value="C:\Users\Paulo\.m2\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="35UMcuxKqNArfNowGuixwYz24B9" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="364t2U8S64JhleDWtj8kCmaVSU2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Start.executor": "Debug",
+    "Application.GerarSenha.executor": "Debug",
+    "Application.Unnamed.executor": "Debug",
+    "Application.WebApplication.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Desenvolvimento/horus/projeto-horus",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Start" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="br.horus.WebApplication" />
-      <module name="horus" />
+  <component name="RunManager" selected="Application.WebApplication">
+    <configuration name="GerarSenha" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.pagme.GerarSenha" />
+      <module name="pagme" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.pagme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.pagme.WebApplication" />
+      <module name="pagme" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="pagme" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="pagme" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.WebApplication" />
+      <item itemvalue="Application.GerarSenha" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GerarSenha" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3296c3ee-2945-4606-a2e8-b610cbc2bf20" name="Changes" comment="" />
-      <created>1763160279610</created>
+      <changelist id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="" />
+      <created>1764277464261</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1763160279610</updated>
+      <updated>1764277464261</updated>
     </task>
-    <task id="LOCAL-00001" summary="feat: &#10;Integrção da tela de login com a geração de token JWT vindo do back.&#10;Implementação de corsConfig&#10;Criação dos interceptors de erro&#10;Implementação de timeout do sistema quando o sistema ficar 15 minutos sem iteração do usuário">
-      <option name="closed" value="true" />
-      <created>1764191005449</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1764191005449</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: &#10;Integrção da tela de login com a geração de token JWT vindo do back.&#10;Implementação de corsConfig&#10;Criação dos interceptors de erro&#10;Implementação de timeout do sistema quando o sistema ficar 15 minutos sem iteração do usuário" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: &#10;Integrção da tela de login com a geração de token JWT vindo do back.&#10;Implementação de corsConfig&#10;Criação dos interceptors de erro&#10;Implementação de timeout do sistema quando o sistema ficar 15 minutos sem iteração do usuário" />
   </component>
 </project>

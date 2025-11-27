@@ -1,0 +1,70 @@
+server:
+  port: 8000
+  compression:
+    enabled: false
+  servlet:
+    contextPath: /pagme
+    session:
+      cookie:
+        name: pagme
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+    include-exception: false
+
+
+spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  application:
+    name: pagme
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pagme_local
+    username: postgres
+    password: root
+    driverClassName: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 40
+      minimum-idle: 8
+      initialization-fail-timeout: 2000
+      validation-timeout: 3000
+      max-lifetime: 1800000
+      auto-commit: true
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  jpa:
+    open-in-view: false
+    defer-datasource-initialization: false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: false
+        default_schema: pgm
+        ddl-auto: none
+        hbm2ddl:
+          auto: create-drop
+           #auto: update
+  sql:
+    init:
+      mode: always
+jwt:
+   publickey: classpath:app.pub
+   privatekey: classpath:app.key
+
+springdoc:
+  override-with-generic-response: false
+
+app:
+  security:
+    jwt:
+      issuer: pagme
+      expires-minutes: 60
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
