@@ -21,9 +21,9 @@ spring:
   application:
     name: pagme
   datasource:
-    url: jdbc:postgresql://localhost:5432/pagme_local
-    username: postgres
-    password: root
+    url: jdbc:postgresql://ep-raspy-king-a4uui4bh-pooler.us-east-1.aws.neon.tech/pagme
+    username: pagme_db
+    password: npg_H03ygUEDictG
     driverClassName: org.postgresql.Driver
     hikari:
       connection-test-query: SELECT 1

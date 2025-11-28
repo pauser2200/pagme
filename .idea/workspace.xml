@@ -4,98 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pagme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustando projeto padrão pagme">
+      <change afterPath="$PROJECT_DIR$/backEnd/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/pagme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pagme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/GerarSenha.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/GerarSenha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/autenticacao/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/autenticacao/AutenticacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/RolesResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/RolesResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/EntidadePersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/EntidadePersistente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/entidades/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/exception/TratadorDeErros.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/exception/TratadorDeErros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/AuthConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/DadosTokenJWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/DadosTokenJWT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/JwtKeysConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/JwtKeysConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/PasswordConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/PasswordConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/UserDetailsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/UserDetailsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/repositpry/usuario/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/repositpry/usuario/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/app.key" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/app.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/app.pub" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/app.pub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/extensions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.config.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/interceptor/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptor/auth.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/interceptor/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptor/error.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/alert.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/alert.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/core/services/sidebar.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/sidebar.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/sidebar/sidebar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/models/produto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/produto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/produtos/produtos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/produtos/produtos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/sobre/sobre.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/sobre/sobre.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/produto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/produto.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/shared/componentes/alert.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/componentes/alert.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/core/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/auth.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +19,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="364t2U8S64JhleDWtj8kCmaVSU2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -123,10 +41,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Desenvolvimento/pagme",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.WebApplication">
@@ -150,26 +77,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="pagme" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.pagme.WebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="pagme" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.WebApplication" />
       <item itemvalue="Application.GerarSenha" />
+      <item itemvalue="Spring Boot.WebApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GerarSenha" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -178,7 +111,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764277464261</updated>
+      <workItem from="1764296600376" duration="158000" />
+      <workItem from="1764331198254" duration="2344000" />
     </task>
+    <task id="LOCAL-00001" summary="Ajustando projeto padrão pagme">
+      <option name="closed" value="true" />
+      <created>1764279119116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764279119116</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajustando projeto padrão pagme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando projeto padrão pagme" />
   </component>
 </project>

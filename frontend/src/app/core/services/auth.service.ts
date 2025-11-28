@@ -2,6 +2,7 @@ import { Injectable, inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { environment } from '../../../environment/environment.local';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,9 @@ import { isPlatformBrowser } from '@angular/common';
 export class AuthService {
   private http = inject(HttpClient);
   private platformId = inject(PLATFORM_ID);
-  
-  private apiUrl = 'http://localhost:8000/horus'; // Ajuste conforme sua porta
-  private tokenKey = 'horus_token';
+
+  private apiUrl = `${environment.apiUrl}/pagme`;
+  private tokenKey = 'pagme_token';
 
   // --- MUDANÇA PRINCIPAL ---
   // Inicializa o Subject já verificando se tem token salvo.
@@ -43,7 +44,7 @@ export class AuthService {
         if (response && response.token) {
           this.setToken(response.token);
           this.isLoggedInSubject.next(true);
-          
+
           if (response.user) {
             this.currentUserSubject.next(response.user);
           }
@@ -73,7 +74,7 @@ export class AuthService {
     return null;
   }
 
- 
+
   // O Guard chama este método. Agora ele checa diretamente a fonte da verdade (storage)
   // ou o valor atual do Subject, garantindo que o F5 funcione.
   isLoggedIn(): boolean {
