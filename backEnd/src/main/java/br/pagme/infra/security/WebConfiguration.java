@@ -47,7 +47,7 @@ public class WebConfiguration {
                                 "/v3/api-docs/**",
                                 "/webjars/**"
                         ).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login","/pagme/login").permitAll()
                         .requestMatchers("/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/basic/**").hasAnyAuthority("ADMIN","BASIC")
                         .anyRequest().authenticated()
