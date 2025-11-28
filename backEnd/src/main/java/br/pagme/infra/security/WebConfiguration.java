@@ -73,7 +73,6 @@ public class WebConfiguration {
     }
 
     @Bean
-    @Order(Ordered.HIGHEST_PRECEDENCE)
     public FilterRegistrationBean<CorsFilter> corsFilterRegistrationBean() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
@@ -85,6 +84,7 @@ public class WebConfiguration {
         source.registerCorsConfiguration("/**", config);
 
         FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
+        bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
 

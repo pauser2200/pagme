@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustando CORS de forma correta 5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustando CORS de forma correta 7" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764277464261</updated>
       <workItem from="1764296600376" duration="158000" />
-      <workItem from="1764331198254" duration="14941000" />
+      <workItem from="1764331198254" duration="15765000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustando projeto padrão pagme">
       <option name="closed" value="true" />
@@ -248,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764349546893</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Ajustando CORS de forma correta 6">
+      <option name="closed" value="true" />
+      <created>1764352214336</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764352214336</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Ajustando CORS de forma correta 7">
+      <option name="closed" value="true" />
+      <created>1764352904584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764352904584</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +277,8 @@
     <MESSAGE value="Ajustando CORS de forma correta 3" />
     <MESSAGE value="Ajustando CORS de forma correta 4" />
     <MESSAGE value="Ajustando CORS de forma correta 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando CORS de forma correta 5" />
+    <MESSAGE value="Ajustando CORS de forma correta 6" />
+    <MESSAGE value="Ajustando CORS de forma correta 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando CORS de forma correta 7" />
   </component>
 </project>
