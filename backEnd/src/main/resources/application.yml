@@ -13,7 +13,6 @@ server:
     include-stacktrace: always
     include-exception: false
 
-
 spring:
   jackson:
     serialization:
@@ -27,8 +26,8 @@ spring:
     driverClassName: org.postgresql.Driver
     hikari:
       connection-test-query: SELECT 1
-      maximum-pool-size: 40
-      minimum-idle: 8
+      maximum-pool-size: 20  # Diminuí para 20 (40 é muito pro plano grátis)
+      minimum-idle: 2        # Diminuí para economizar recursos
       initialization-fail-timeout: 2000
       validation-timeout: 3000
       max-lifetime: 1800000
@@ -39,19 +38,22 @@ spring:
   jpa:
     open-in-view: false
     defer-datasource-initialization: false
+    # Configuração Padrão do Spring (Recomendada)
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         globally_quoted_identifiers: false
         default_schema: pgm
-        ddl-auto: none
+        # Garante que o schema 'pgm' seja criado se não existir
         hbm2ddl:
-          auto: update
+          create_namespaces: true
   sql:
     init:
       mode: always
 jwt:
-   publickey: classpath:app.pub
-   privatekey: classpath:app.key
+  publickey: classpath:app.pub
+  privatekey: classpath:app.key
 
 springdoc:
   override-with-generic-response: false
