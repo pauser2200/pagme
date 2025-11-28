@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustando url de prod" />
+    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustando CORS de forma correta 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764277464261</updated>
       <workItem from="1764296600376" duration="158000" />
-      <workItem from="1764331198254" duration="10260000" />
+      <workItem from="1764331198254" duration="11199000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustando projeto padrão pagme">
       <option name="closed" value="true" />
@@ -205,7 +205,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764346042246</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ajustando CORS de forma correta">
+      <option name="closed" value="true" />
+      <created>1764346835894</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764346835894</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ajustando CORS de forma correta 2">
+      <option name="closed" value="true" />
+      <created>1764347813279</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764347813279</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +232,8 @@
     <MESSAGE value="Teste de publicação do sistema" />
     <MESSAGE value="expondo porta 8000" />
     <MESSAGE value="Ajustando url de prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando url de prod" />
+    <MESSAGE value="Ajustando CORS de forma correta" />
+    <MESSAGE value="Ajustando CORS de forma correta 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando CORS de forma correta 2" />
   </component>
 </project>
