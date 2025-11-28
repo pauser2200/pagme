@@ -15,7 +15,6 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
@@ -31,24 +30,24 @@ public class WebConfiguration {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-                // Mantém a chamada do CORS
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(
                                 "/actuator/**",
                                 "/configuration/security",
                                 "/configuration/ui",
                                 "/oauth/verify",
                                 "/public/**",
-                                "/swagger-resources/**",
+                                "/swagger-resources",
+                                "/swagger-resources/configuration/security",
+                                "/swagger-resources/configuration/ui",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/webjars/**"
                         ).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/login", "/pagme/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers("/admin/**").hasAuthority("ADMIN")
-                        .requestMatchers("/basic/**").hasAnyAuthority("ADMIN", "BASIC")
+                        .requestMatchers("/basic/**").hasAnyAuthority("ADMIN","BASIC")
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
@@ -57,6 +56,18 @@ public class WebConfiguration {
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
+    }
+
+    @Bean
+    public JwtAuthenticationConverter jwtAuthenticationConverter() {
+        // Converte a claim "roles" do token em authorities
+        var gac = new JwtGrantedAuthoritiesConverter();
+        gac.setAuthoritiesClaimName("roles");
+        gac.setAuthorityPrefix("");
+
+        var conv = new JwtAuthenticationConverter();
+        conv.setJwtGrantedAuthoritiesConverter(gac);
+        return conv;
     }
 
     @Bean
@@ -74,17 +85,5 @@ public class WebConfiguration {
         // ESTA LINHA É O SEGREDO: Ordem Zero (Máxima Prioridade)
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
-    }
-
-    @Bean
-    public JwtAuthenticationConverter jwtAuthenticationConverter() {
-        // Converte a claim "roles" do token em authorities
-        var gac = new JwtGrantedAuthoritiesConverter();
-        gac.setAuthoritiesClaimName("roles");
-        gac.setAuthorityPrefix("");
-
-        var conv = new JwtAuthenticationConverter();
-        conv.setJwtGrantedAuthoritiesConverter(gac);
-        return conv;
     }
 }
