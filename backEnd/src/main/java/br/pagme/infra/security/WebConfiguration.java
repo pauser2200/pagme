@@ -62,6 +62,7 @@ public class WebConfiguration {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(Arrays.asList(
+                "https://pagme-beta.vercel.app/pagme",
                 "https://pagme-beta.vercel.app",
                 "http://localhost:4200"
         ));
