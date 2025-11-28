@@ -74,8 +74,7 @@ public class WebConfiguration {
         CorsConfiguration configuration = new CorsConfiguration();
 
         // PERMITIR O FRONTEND ANGULAR (Ajuste se necessário)
-        configuration.setAllowedOrigins(List.of("http://localhost:4200"));
-
+        configuration.setAllowedOrigins(List.of("https://pagme-beta.vercel.app", "http://localhost:4200"));
         // Métodos permitidos
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
