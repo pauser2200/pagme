@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  
+  <div>
+    <h2 class="fw-bold text-dark mb-0">{{ title }}</h2>
+    
+    <p *ngIf="subtitle" class="text-secondary small">{{ subtitle }}</p>
+  </div>
+
+  <div>
+    <ng-content></ng-content>
+  </div>
+
+</div>

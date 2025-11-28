@@ -1,0 +1,111 @@
+@use "sass:color"; 
+
+// --- Variáveis de Cor ---
+$card-bg-solid: #2b3035;
+
+// --- Novas Variáveis de Cor (Paleta Pagme Dark) ---
+$card-bg-solid: #2b3035;      // Um cinza chumbo sólido, melhor que o "subtle"
+$text-white-pure: #ffffff;    // Branco puro para títulos e valores
+$text-grey-light: #e9ecef;    // Cinza bem claro para rótulos e textos secundários
+$border-color: rgba(255, 255, 255, 0.1); // Bordas sutis
+
+// 1. APLICAÇÃO GERAL NOS CARDS
+// Forçamos essas cores em todos os cards da home
+.card {
+  background-color: $card-bg-solid !important; // Substitui o bg-dark-subtle
+  border: 1px solid $border-color;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); // Sombra mais marcada para destacar
+  
+  // Títulos principais e valores em negrito ficam BRANCOS
+  h2, h3, h5, h6, .card-title, .fw-bold {
+    color: $text-white-pure !important;
+  }
+
+  // Textos secundários, labels e small ficam CINZA CLARO
+  p, span, small, .text-muted, .text-secondary {
+    color: $text-grey-light !important;
+    opacity: 0.8; // Leve transparência para diferenciar do branco puro
+  }
+
+  // Cabeçalhos dos cards (onde diz "Próximos Vencimentos")
+  .card-header {
+    border-bottom: 1px solid $border-color;
+    h5 { color: $text-white-pure !important; }
+  }
+}
+
+.table-dark {
+  --bs-table-bg: transparent; // Fundo transparente para pegar a cor do card
+  
+  // Cabeçalho da tabela (DEVEDOR, CARTÃO, DATA...)
+  thead th {
+    color: $text-grey-light !important;
+    border-bottom: 2px solid $border-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+
+  // Linhas da tabela
+  tbody td {
+    color: $text-grey-light;
+    border-bottom: 1px solid $border-color;
+    
+    .fw-medium, .fw-bold {
+      color: $text-white-pure !important;
+    }
+  }
+}
+
+.list-group-item {
+  background-color: transparent !important;
+  border-bottom: 1px solid $border-color !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+
+  // Número do ranking (#1, #2)
+  .text-muted, .font-monospace {
+     color: $text-grey-light !important;
+     opacity: 0.6;
+  }
+
+  // Nome do devedor
+  h6 { color: $text-white-pure !important; }
+}
+
+.badge.bg-danger-subtle {
+  background-color: rgba(220, 53, 69, 0.25) !important;
+  color: #ff8a8a !important; 
+  border: none !important;
+  font-weight: 500;
+}
+
+//ÍCONES NOS CARDS DO TOPO
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  // Fundo dos ícones ligeiramente mais claro que o card
+  background-color: rgba(255,255,255,0.05) !important;
+  
+  &.text-primary { color: #0d6efd !important; }
+  &.text-warning { color: #ffc107 !important; }
+  &.text-success { color: #198754 !important; }
+  &.text-info    { color: #0dcaf0 !important; }
+}
+
+// Efeito de Hover nos Cards do Topo
+.stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        background-color: color.adjust($card-bg-solid, $lightness: 3%) !important; 
+    }
+}

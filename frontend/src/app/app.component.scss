@@ -1,4 +1,3 @@
-
 // 1. Nossas variáveis de largura
 $sidebar-width-open: 250px;
 $sidebar-width-closed: 72px;
@@ -6,26 +5,27 @@ $sidebar-width-closed: 72px;
 // 2. O contêiner do Menu
 .sidebar {
   position: fixed;
-  top: 56px;
+  top: 60px;
   bottom: 0;
   left: 0;
   z-index: 1000;
   width: $sidebar-width-open;
   padding: 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-  transition: width 0.3s ease-in-out;
-  
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; 
+  /* Adicionei 'transform' na transição para suavizar no mobile */
+  background-color: #212529; /* Garante fundo escuro (bg-dark) */
 }
 
 // 3. A Área de Conteúdo
 main {
-  padding-top: 56px;
+  padding-top: 60px;
   margin-left: $sidebar-width-open;
   width: calc(100% - #{$sidebar-width-open});
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
-// 4. O ESTADO COLAPSADO
+// 4. O ESTADO COLAPSADO (DESKTOP PADRÃO)
 .sidebar.collapsed {
   width: $sidebar-width-closed;
 }
@@ -35,13 +35,12 @@ main.collapsed {
   width: calc(100% - #{$sidebar-width-closed});
 }
 
-
+// BOTÃO
 .sidebar-toggle-button {
   position: fixed;
-  z-index: 1031;
-  top: 64px;
+  z-index: 1031; /* Acima do menu (1000) */
+  top: 70px;
   left: 16px;
-
   background: transparent;
   border: none;
   color: #ffffff;
@@ -55,7 +54,6 @@ main.collapsed {
   transition: background-color 0.2s ease-in-out;
 }
 
-
 .sidebar-toggle-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -65,4 +63,75 @@ main.full-page {
   width: 100%;
   padding-top: 0;
   height: 100vh;
+}
+
+// OVERLAY (Fundo escuro para mobile)
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Atrás do menu, na frente do main */
+  backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* 1. MAIN (CONTEÚDO)
+     O conteúdo principal deve SEMPRE deixar um espaço de 72px na esquerda,
+     pois a barra nunca vai sumir completamente. */
+  main, 
+  main.collapsed {
+    margin-left: 72px !important; 
+    width: calc(100% - 72px) !important;
+    padding-top: 60px;
+  }
+
+  /* 2. SIDEBAR - GERAL 
+     Removemos a translação negativa. Ela agora fica sempre na tela. */
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: calc(100vh - 56px);
+    z-index: 1040; /* Alta prioridade */
+    
+    /* Importante: Começa expandida ou colapsada dependendo da classe */
+    transform: none !important; 
+    transition: width 0.3s ease;
+  }
+
+  /* 3. ESTADO FECHADO (Padrão inicial ou ao clicar)
+     Aqui está a mágica: em vez de sumir, ela fica com 72px */
+  .sidebar.collapsed {
+    width: 72px; 
+    overflow: hidden; /* Esconde os textos longos */
+  }
+
+  /* 4. ESTADO ABERTO (Expandido)
+     Quando expande, ela sobrepõe o conteúdo (não empurra o main, senão quebra o layout) */
+  .sidebar:not(.collapsed) {
+    width: 250px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.5); /* Sombra para destacar que está por cima */
+  }
+
+  /* 5. AJUSTE DO BOTÃO FLUTUANTE
+     Como a barra de 72px vai ocupar o canto esquerdo, 
+     precisamos empurrar o botão um pouco mais para a direita ou 
+     deixá-lo alinhado com a barra. */
+  .sidebar-toggle-button {
+    /* Opção A: Centralizar o botão na largura da mini-sidebar (72px) */
+    left: 12px; /* (72px - 48px do botão) / 2 = 12px de margem */
+    width: 48px;
+    
+    /* Ajuste vertical para ficar abaixo do ícone de usuário */
+    top: 70px; 
+    
+    /* Visual */
+    background-color: #212529;
+    z-index: 1050;
+  }
 }

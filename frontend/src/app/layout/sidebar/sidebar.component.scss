@@ -1,47 +1,112 @@
+/* --- Variáveis --- */
+$primary-color: #0d6efd;
+$text-default: rgba(255, 255, 255, 0.75);
+$text-hover: #ffffff;
+$hover-bg: rgba(255, 255, 255, 0.1);
+$border-radius: 10px;
+
+/* Largura calculada para encaixar na sidebar fechada (72px)
+   72px (Sidebar) - 20px (Paddings laterais) = ~52px pro botão */
+$icon-width: 50px; 
+
 .sidebar-scroll-area {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  
+  &::-webkit-scrollbar { width: 5px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
 }
 
 .sidebar-nav-content {
-  padding-top: 60px;
+  /* Topo (40px) | Direita (10px) | Baixo | Esquerda (10px) */
+  padding: 50px 10px 16px 10px;
 }
 
+.nav-item {
+  margin-bottom: 6px;
+}
+
+/* O BOTÃO (CÁPSULA) */
 .nav-link {
   display: flex;
   align-items: center;
+  height: 48px;
+  padding: 0; /* Padding zero! O ícone vai dar o espaçamento */
+  border-radius: $border-radius;
+  color: $text-default;
+  text-decoration: none;
   overflow: hidden;
   white-space: nowrap;
-  padding-left: 24px;
-  height: 48px;
-  color: rgba(255, 255, 255, 0.75);
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
+  cursor: pointer;
+  
+  /* Transição só na cor e fundo, SEM mexer na geometria */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 
-.nav-link:hover {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-}
+  /* 1. O ÍCONE (A ÂNCORA ESTÁTICA) */
+  .bi {
+    /* O Ícone tem largura FIXA sempre. Ele nunca muda de tamanho ou margem. */
+    min-width: $icon-width; 
+    height: 100%; /* Ocupa altura total para centralizar verticalmente */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    
+    /* Sem margens extras, a largura fixa já cuida do espaço */
+    margin: 0; 
+    
+    /* Apenas transição de cor e escala (zoom), sem movimento lateral */
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
 
-.nav-link.active {
-  color: #ffffff;
-  background-color: #0d6efd;
-}
-
-.bi {
-  min-width: 24px;
-  margin-right: 16px;
-  color: inherit;
-}
-
-.link-text {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-:host-context(.sidebar.collapsed) {
+  /* 2. O TEXTO */
   .link-text {
-    opacity: 0;
+    font-weight: 500;
+    opacity: 1;
+    /* Transição suave apenas de opacidade */
+    transition: opacity 0.3s ease;
+    padding-right: 10px; /* Espaço na direita do texto */
+  }
+
+  /* --- ESTADOS --- */
+  &:hover {
+    background-color: $hover-bg;
+    color: $text-hover;
+    .bi { transform: scale(1.1); color: #fff; }
+  }
+
+  &.active {
+    background-color: $primary-color;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    .bi { color: #fff; }
+  }
+}
+
+/* =============================================
+   ESTADO FECHADO (MINI SIDEBAR)
+   ============================================= */
+:host-context(.sidebar.collapsed) {
+  
+  /* Mantemos o padding da caixa igual para não mover nada */
+  .sidebar-nav-content {
+    padding: 50px 10px 16px 10px; 
+  }
+
+  .nav-link {
+    /* O botão encolhe para a largura exata do ícone + bordas */
+    width: $icon-width; 
+    
+    /* Como o ícone já está no começo (flex-start) e tem largura fixa,
+       ele não se move nem um milímetro. */
+
+    /* Esconde o texto */
+    .link-text {
+      opacity: 0;
+      display: none; /* Remove do fluxo para não bugar a largura */
+    }
   }
 }

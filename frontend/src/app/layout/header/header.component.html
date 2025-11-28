@@ -1,43 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-  <div class="container-fluid">
+<nav class="navbar navbar-dark bg-dark fixed-top" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+  <div class="container-fluid d-flex align-items-center">
     
     <a class="navbar-brand ms-2" href="#">Meu Projeto Angular</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav ms-auto flex-row align-items-center gap-3">
       
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        
-        <li *ngIf="!(isLoggedIn$ | async)" class="nav-item">
-          <a class="nav-link active" routerLink="/login">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span class="ms-1">Login</span>
-          </a>
-        </li>
+      <li *ngIf="!(isLoggedIn$ | async)" class="nav-item">
+        <a class="nav-link active d-flex align-items-center" routerLink="/login">
+          <i class="bi bi-box-arrow-in-right fs-5"></i>
+          <span class="ms-2 d-none d-sm-inline">Login</span> </a>
+      </li>
 
-        <li *ngIf="isLoggedIn$ | async" class="nav-item dropdown">
-          
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-             data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i>
-            <span class="ms-1">{{ (currentUser$ | async)?.email }}</span>
-          </a>
-          
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" (click)="onLogout()" style="cursor: pointer;">
-                <i class="bi bi-box-arrow-right me-2"></i>
-                Logout
-              </a>
-            </li>
-          </ul>
-        </li>
+      <li *ngIf="isLoggedIn$ | async" class="nav-item dropdown">
         
-      </ul>
+        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          
+          <i class="bi bi-person-circle fs-4"></i> <span class="ms-2 d-none d-md-inline">
+            {{ (currentUser$ | async)?.email }}
+          </span>
+        </a>
+        
+        <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbarDropdown">
+          <li class="d-md-none">
+            <span class="dropdown-item-text text-muted small">
+              {{ (currentUser$ | async)?.email }}
+            </span>
+          </li>
+          <li class="d-md-none"><hr class="dropdown-divider"></li>
 
-    </div>
+          <li>
+            <a class="dropdown-item text-danger" (click)="onLogout()" style="cursor: pointer;">
+              <i class="bi bi-box-arrow-right me-2"></i>
+              Sair
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="pe-2"></li> 
+
+    </ul>
+
   </div>
 </nav>

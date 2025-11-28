@@ -1,9 +1,6 @@
-
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { SidebarService } from '../../core/services/sidebar.service';
 import { CommonModule } from '@angular/common'; 
-import { Observable } from 'rxjs'; 
 
 @Component({
   selector: 'app-sidebar',
@@ -18,9 +15,6 @@ import { Observable } from 'rxjs';
 })
 export class SidebarComponent {
   
-  constructor(private sidebarService: SidebarService) {
-    
-  }
+  constructor() { }
 
- 
 }

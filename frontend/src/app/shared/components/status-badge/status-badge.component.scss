@@ -1,0 +1,11 @@
+.badge {
+  font-weight: 600;      // Um pouco mais grosso
+  letter-spacing: 0.5px; // Espaçamento entre letras
+  padding: 0.5em 0.8em;  // Espaçamento interno
+  border-radius: 6px;    // Bordas levemente arredondadas
+  
+  // Garante que o texto fique sempre em maiúsculo visualmente, 
+  // mesmo que no banco venha "Ativo"
+  text-transform: uppercase; 
+  font-size: 0.75rem;
+}

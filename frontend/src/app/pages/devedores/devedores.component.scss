@@ -1,0 +1,87 @@
+@use "sass:color";
+
+$card-bg-solid: #2b3035;
+$text-white-pure: #ffffff;
+$text-grey-light: #e9ecef;
+$border-color: rgba(255, 255, 255, 0.1);
+
+
+.content-card {
+    background-color: $card-bg-solid;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); // Sombra suave
+}
+
+/* Tabela Dark Customizada (Dentro do card escuro) */
+.table-dark {
+    --bs-table-bg: transparent;
+
+    th {
+        color: $text-grey-light;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    td {
+        border-bottom: 1px solid $border-color;
+        padding: 1rem 0.5rem;
+        color: $text-grey-light;
+        
+        /* Garante que os textos de destaque fiquem brancos */
+        .fw-bold, .text-white {
+            color: $text-white-pure !important;
+        }
+    }
+
+    /* Hover na linha */
+    tbody tr {
+        transition: background-color 0.2s;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    }
+}
+
+/* Avatar (Bolinha com inicial) */
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    
+    &.bg-primary { background-color: #0d6efd; }
+    &.bg-danger { background-color: #dc3545; }
+}
+
+/* Badges e Botões */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-icon {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}

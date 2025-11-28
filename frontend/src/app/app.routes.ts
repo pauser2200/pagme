@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
-import { SobreComponent } from './pages/sobre/sobre.component';
+import { DevedoresComponent } from './pages/devedores/devedores.component';
 import { LoginComponent } from './pages/login/login.component';
 import { authGuard, loginGuard } from './core/services/auth.guard';
 
@@ -21,8 +21,8 @@ export const routes: Routes = [
     canActivate: [authGuard] // Protege a rota com a guarda de autenticação
   },
   {
-    path: 'sobre', // Rota "sobre" (ex: .../sobre)
-    component: SobreComponent,
+    path: 'sobre', // Rota "Devedores" (ex: .../sobre)
+    component: DevedoresComponent,
     title: 'Sobre Nós',
     canActivate: [authGuard]
   },

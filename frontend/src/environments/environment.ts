@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://pagme-97cr.onrender.com/pagme'
+  apiUrl: 'http://127.1.1.1:8000/pagme'
 };
