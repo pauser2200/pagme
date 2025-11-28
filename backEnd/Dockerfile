@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build /app/backEnd/target/*.jar app.jar
 
 # Informa ao Render que a porta 8080 será usada
-EXPOSE 8080
+EXPOSE 8000
 
 # Comando para iniciar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
