@@ -6,6 +6,7 @@ WORKDIR /app
 # Copia todo o código fonte para dentro do container
 COPY . .
 
+WORKDIR /app/backEnd
 # Compila o projeto e gera o .jar (Pula os testes para agilizar o deploy)
 RUN mvn clean package -DskipTests
 
@@ -16,7 +17,7 @@ WORKDIR /app
 
 # Copia apenas o arquivo .jar gerado no estágio anterior
 # O asterisco *.jar pega o nome do arquivo independente da versão
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/backEnd/target/*.jar app.jar
 
 # Informa ao Render que a porta 8080 será usada
 EXPOSE 8080
