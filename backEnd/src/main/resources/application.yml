@@ -45,8 +45,7 @@ spring:
         default_schema: pgm
         ddl-auto: none
         hbm2ddl:
-          auto: create-drop
-           #auto: update
+          auto: update
   sql:
     init:
       mode: always
