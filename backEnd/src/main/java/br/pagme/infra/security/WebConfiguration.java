@@ -28,25 +28,25 @@ public class WebConfiguration {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
+                // Mantém a chamada do CORS
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(
                                 "/actuator/**",
                                 "/configuration/security",
                                 "/configuration/ui",
                                 "/oauth/verify",
                                 "/public/**",
-                                "/swagger-resources",
-                                "/swagger-resources/configuration/security",
-                                "/swagger-resources/configuration/ui",
+                                "/swagger-resources/**",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/webjars/**"
                         ).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login", "/pagme/login").permitAll()
                         .requestMatchers("/admin/**").hasAuthority("ADMIN")
-                        .requestMatchers("/basic/**").hasAnyAuthority("ADMIN","BASIC")
+                        .requestMatchers("/basic/**").hasAnyAuthority("ADMIN", "BASIC")
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
@@ -55,6 +55,29 @@ public class WebConfiguration {
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
+    }
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+
+        configuration.setAllowedOrigins(Arrays.asList(
+                "https://pagme-beta.vercel.app",
+                "http://localhost:4200"
+        ));
+
+        // Métodos permitidos
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT"));
+
+        // Às vezes o Angular manda headers extras de rastreio ou x-requested-with
+        configuration.setAllowedHeaders(List.of("*"));
+
+        configuration.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+
+        return source;
     }
 
     @Bean
@@ -68,30 +91,4 @@ public class WebConfiguration {
         conv.setJwtGrantedAuthoritiesConverter(gac);
         return conv;
     }
-
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-
-        // PERMITIR O FRONTEND ANGULAR (Ajuste se necessário)
-        configuration.setAllowedOrigins(Arrays.asList(
-                "https://pagme-beta.vercel.app",
-                "http://localhost:4200"
-        ));
-        // Métodos permitidos
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-
-        // Headers permitidos (Authorization é crucial para o JWT)
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-
-        // Permite credenciais (cookies/auth headers)
-        configuration.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        // Aplica essa configuração para todas as rotas
-        source.registerCorsConfiguration("/**", configuration);
-
-        return source;
-    }
-
 }
