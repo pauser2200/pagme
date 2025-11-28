@@ -11,7 +11,7 @@ export class AuthService {
   private http = inject(HttpClient);
   private platformId = inject(PLATFORM_ID);
 
-  private apiUrl = `${environment.apiUrl}/pagme`;
+  private apiUrl = `${environment.apiUrl}`;
   private tokenKey = 'pagme_token';
 
   // --- MUDANÇA PRINCIPAL ---
