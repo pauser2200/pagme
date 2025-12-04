@@ -12,7 +12,7 @@
     <artifactId>pagme</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pagme</name>
-    <description>Sistema de segurança e gestão de aeroportos</description>
+    <description>Sistema de gestão de cobranças</description>
     <url/>
 
     <properties>

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlertService } from '../../core/services/alert.service';
+import { AlertService } from '../../../core/services/alert.service';
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({

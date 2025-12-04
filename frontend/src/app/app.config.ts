@@ -8,7 +8,7 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { NgIdleModule } from '@ng-idle/core';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { authInterceptor } from './core/interceptor/auth.interceptor';
-import { errorInterceptor } from './core/interceptor/error.interceptor'; // Importe o arquivo novo
+import { errorInterceptor } from './core/interceptor/error.interceptor'; 
 
 export const appConfig: ApplicationConfig = {
   providers: [

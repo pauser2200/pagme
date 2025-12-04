@@ -1,5 +1,5 @@
-import { Component, OnInit, HostListener, Inject, PLATFORM_ID } from '@angular/core'; // <--- Adicione Inject e PLATFORM_ID
-import { CommonModule, isPlatformBrowser } from '@angular/common'; // <--- Adicione isPlatformBrowser
+import { Component, OnInit, HostListener, Inject, PLATFORM_ID } from '@angular/core'; 
+import { CommonModule, isPlatformBrowser } from '@angular/common'; 
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
@@ -36,12 +36,11 @@ export class AppComponent implements OnInit {
     private keepalive: Keepalive,
     private authService: AuthService, 
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object // <--- Injete o ID da plataforma
+    @Inject(PLATFORM_ID) private platformId: Object 
   ) {
     this.isSidebarOpen$ = this.sidebarService.isOpen$;
     this.layoutVisible$ = this.sidebarService.layoutVisible$;
 
-    // Inscreva-se para manter a variável local atualizada
     this.isSidebarOpen$.subscribe(state => {
       this.isMenuOpen = state;
     });
@@ -66,12 +65,10 @@ export class AppComponent implements OnInit {
     this.checkScreenSize();
   }
 
-  // --- CORREÇÃO AQUI ---
   private checkScreenSize() {
     // Só executa se estivermos no NAVEGADOR (Browser)
     if (isPlatformBrowser(this.platformId)) {
       
-      // Agora é seguro usar 'window'
       if (window.innerWidth <= 768 && this.isMenuOpen) {
         this.sidebarService.toggle();
       }
@@ -85,7 +82,6 @@ export class AppComponent implements OnInit {
   }
 
   startWatching() {
-    // (Lógica do Idle mantida inalterada...)
     this.idle.onIdleStart.subscribe(() => {
       console.log('Usuário ficou inativo.');
       this.isIdleWarningVisible = true;

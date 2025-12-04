@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { AlertService } from '../../core/services/alert.service';
-import { AlertComponent } from "../../shared/components/alert.component";
+import { AlertComponent } from '../../shared/components/alert/alert.component';
 import { PageHeaderComponent } from "../../shared/components/page-header/page-header.component";
 
 @Component({

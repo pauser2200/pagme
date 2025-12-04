@@ -1,16 +1,15 @@
 package br.pagme.domain.usuario.entidades;
 
 import br.pagme.domain.EntidadePersistente;
+import br.pagme.domain.usuario.enums.RolesEnum;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -32,25 +31,39 @@ public class Usuario extends EntidadePersistente<Long> implements UserDetails {
     @Column(name = "USU_DS_PASSWORD", nullable = false)
     private String password;
 
-    @Column(name = "USU_DS_EMAIL", nullable = false, columnDefinition = "VARCHAR(255)")
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RolesEnum role;
+
+    @Column(name = "USU_DS_EMAIL", nullable = false,unique = true, columnDefinition = "VARCHAR(100)")
     private String email;
 
+    @Column(name = "USU_DS_TELEFONE", nullable = false, columnDefinition = "VARCHAR(11)")
+    private String telefone;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "USU_USUARIOS_ROLES",
-            joinColumns = @JoinColumn(name = "USU_ID"),
-            inverseJoinColumns = @JoinColumn(name = "ROL_ID")
-    )
-    private Set<Role> roles;
+    @Column(name = "USU_IB_ATIVO", nullable = false)
+    @Builder.Default
+    private boolean ativo = true;
+
+    @Column(name = "USU_DH_CRIACAO")
+    private LocalDateTime criadoEm;
+
+    @PrePersist
+    protected void onCreate() {
+        this.criadoEm = LocalDateTime.now();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> authorities = new ArrayList<>(List.of());
-        if(!getRoles().isEmpty()) {
-            getRoles().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getName())));
+        // Retorna a role. Ex: se for ADMIN, retorna uma authority "ROLE_ADMIN"
+        // O Spring Security gosta do prefixo "ROLE_" para métodos hasRole()
+        if (RolesEnum.ADMIN.equals(this.role)) {
+            return List.of(
+                    new SimpleGrantedAuthority("ROLE_ADMIN"),
+                    new SimpleGrantedAuthority("SCOPE_ADMIN")
+            );
         }
-        return authorities;
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
     @Override

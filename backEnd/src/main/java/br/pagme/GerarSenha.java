@@ -11,7 +11,7 @@ public class GerarSenha {
      *
      **/
     public static void main(String[] args) {
-      System.out.println(new BCryptPasswordEncoder().encode(new String("12345678")));
+      System.out.println(new BCryptPasswordEncoder().encode("12345678"));
 
         //var encoder = new BCryptPasswordEncoder();
         ///System.out.println(encoder.matches("basic123",

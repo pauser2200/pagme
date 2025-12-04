@@ -11,7 +11,7 @@ import {
 
 import { AuthService } from '../../core/services/auth.service';
 import { SidebarService } from '../../core/services/sidebar.service';
-import { AlertComponent } from "../../shared/components/alert.component";
+import { AlertComponent } from '../../shared/components/alert/alert.component';
 
 @Component({
   selector: 'app-login',

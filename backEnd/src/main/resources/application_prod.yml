@@ -20,14 +20,14 @@ spring:
   application:
     name: pagme
   datasource:
-    url: jdbc:postgresql://localhost:5432/pagme_local
-    username: postgres
-    password: root
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driverClassName: org.postgresql.Driver
     hikari:
       connection-test-query: SELECT 1
-      maximum-pool-size: 20
-      minimum-idle: 2
+      maximum-pool-size: 20  # Diminuí para 20 (40 é muito pro plano grátis)
+      minimum-idle: 2        # Diminuí para economizar recursos
       initialization-fail-timeout: 2000
       validation-timeout: 3000
       max-lifetime: 1800000
@@ -40,7 +40,7 @@ spring:
     defer-datasource-initialization: false
     # Configuração Padrão do Spring (Recomendada)
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         globally_quoted_identifiers: false
