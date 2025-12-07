@@ -5,7 +5,7 @@ import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { AuthService } from '../../core/services/auth.service';
-import { User } from '../../models/user.model'; // 1. Importe o User
+import { Usuario } from '../../models/usuario.model'; 
 
 @Component({
   selector: 'app-header',
@@ -21,7 +21,7 @@ export class HeaderComponent {
 
   // 2. Precisamos dos dois observables
   public isLoggedIn$: Observable<boolean>;
-  public currentUser$: Observable<User | null>;
+  public currentUser$: Observable<Usuario | null>;
 
   constructor(
     private authService: AuthService,

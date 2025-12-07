@@ -3,18 +3,19 @@ package br.pagme.service.usuario;
 import br.pagme.controller.usuario.resources.UsuarioResources;
 import br.pagme.domain.usuario.entidades.Usuario;
 import br.pagme.domain.usuario.mappers.UsuarioMapper;
-import br.pagme.repositpry.usuario.UsuarioRepository;
+import br.pagme.enums.StatusEnum;
+import br.pagme.repository.usuario.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 @RequiredArgsConstructor
 public class UsuarioService {
 
     private final UsuarioRepository repository;
-//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     protected final UsuarioMapper mapper;
 
@@ -24,14 +25,29 @@ public class UsuarioService {
     }
 
     public UsuarioResources salvar(UsuarioResources resources) {
-        var usuario = this.mapper.toEntity(resources);
-//        usuario.setPassword(bCryptPasswordEncoder.encode(resources.getPassword()));
-        return this.mapper.toDto(this.repository.save(usuario));
+       AtomicReference<Usuario> usuarionovo = new AtomicReference<>(new Usuario());
+      repository.findByEmail(resources.email()).ifPresentOrElse(
+                (usu) -> {
+                    usu.setStatus(StatusEnum.ATIVO);
+                    repository.save(usu);
+                },
+                () -> {
+                    usuarionovo.set(this.mapper.toEntity(resources));
+                    usuarionovo.get().setStatus(StatusEnum.ATIVO);
+                    this.repository.save(usuarionovo.get());
+
+                }
+        );
+
+        return this.mapper.toDto(usuarionovo.get());
     }
 
     public void excluir(long idUsuario) {
         var usuario = repository.findById(idUsuario);
-        usuario.ifPresent(repository::delete);
+        usuario.ifPresent(usu -> {
+            usu.setStatus(StatusEnum.INATIVO);
+            this.repository.save(usu);
+        });
     }
 
 }

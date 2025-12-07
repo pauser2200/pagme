@@ -1,30 +1,77 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalComponent } from '../../../../shared/components/modal/modal.component'; // Ajuste o caminho se necessário
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms'; 
+import { ModalComponent } from '../../../../shared/components/modal/modal.component';
+import { DevedorService } from '../../../../services/devedor.service';
+import { AlertComponent } from '../../../../shared/components/alert/alert.component';
+import { AlertService } from '../../../../core/services/alert.service';
 
 @Component({
   selector: 'app-modal-devedor',
   standalone: true,
-  imports: [CommonModule, ModalComponent], // Importamos o Modal Genérico aqui
+  imports: [CommonModule, ModalComponent, FormsModule, ReactiveFormsModule], 
   templateUrl: './modal-devedor.component.html',
   styleUrl: './modal-devedor.component.scss'
 })
-export class ModalDevedorComponent {
+export class ModalDevedorComponent implements OnInit {
 
-  // Recebe do pai se deve aparecer ou não
   @Input() visible: boolean = false;
-
-  // Avisa o pai para fechar (mudando a variável lá)
   @Output() visibleChange = new EventEmitter<boolean>();
+  @Output() onSalvar = new EventEmitter<void>();
+  
+  modalDevedorForm!: FormGroup;
+
+ 
+  constructor(private devedorService: DevedorService,private fb: FormBuilder, private alertService: AlertService) {}
+
+ngOnInit(): void {
+    this.inicializarFormulario();
+  }
+
 
   fechar() {
     this.visible = false;
-    this.visibleChange.emit(this.visible); // Avisa o pai que fechou
+    this.visibleChange.emit(this.visible);
+    this.inicializarFormulario();
   }
 
+  
+
   salvar() {
-    console.log('Salvando novo devedor...');
-    // Aqui você chamaria o serviço depois
-    this.fechar();
+
+    if (this.modalDevedorForm.invalid) {
+      this.modalDevedorForm.markAllAsTouched(); // Faz os erros aparecerem na tela (vermelho)
+      return;
+    }
+    const formValues = this.modalDevedorForm.value;
+
+    // Se não tiver email, cria um fake baseado no nome para não quebrar o banco
+    const emailFinal = formValues.email || 
+      `${formValues.nome.toLowerCase().replace(/\s/g, '')}@pagme.local`;
+
+    const payloadBackEnd = {
+      nome: formValues.nome,
+      telefone: formValues.telefone,
+      email: emailFinal,
+      username: emailFinal.split('@')[0], 
+      password: 'mudar123', 
+      role: 'USER' 
+    };
+
+    this.devedorService.salvar(payloadBackEnd).subscribe({
+      next: () => {
+        this.alertService.success('Devedor salvo com sucesso!');
+        this.onSalvar.emit();
+        this.fechar();
+      }
+    });
+  }
+
+  inicializarFormulario() {
+    this.modalDevedorForm = this.fb.group({
+      nome: ['', [Validators.required, Validators.minLength(3)]],
+      telefone: ['', Validators.required],
+      email: ['', [Validators.email]] 
+    });
   }
 }

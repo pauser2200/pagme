@@ -1,7 +1,7 @@
-package br.pagme.domain.usuario.mappers;
+package br.pagme.domain.parcela.mappers;
 
-import br.pagme.controller.usuario.resources.UsuarioResources;
-import br.pagme.domain.usuario.entidades.Usuario;
+import br.pagme.controller.parcela.resources.ParcelaResources;
+import br.pagme.domain.parcela.entidades.Parcela;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -11,12 +11,12 @@ import java.util.List;
         componentModel = "spring",
         unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
-public interface UsuarioMapper {
+public interface ParcelaMapper {
 
-    Usuario toEntity(UsuarioResources usuarioResources);
+    Parcela toEntity(ParcelaResources resources);
 
-    UsuarioResources toDto(Usuario usuario);
+    ParcelaResources toDto(Parcela Parcela);
 
-    List<UsuarioResources> toDto(List<Usuario> usuarios);
+    List<ParcelaResources> toDto(List<Parcela> Parcelas);
 
 }

@@ -1,7 +1,7 @@
 // src/app/app.config.ts
 
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withDebugTracing, withRouterConfig } from '@angular/router';
 import { routes } from './app.routes';
 
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
@@ -12,7 +12,8 @@ import { errorInterceptor } from './core/interceptor/error.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withRouterConfig({ onSameUrlNavigation:  'reload' })),
+   
     // 2. Adicione o provider aqui
     importProvidersFrom(NgIdleModule.forRoot()),
     importProvidersFrom(NgIdleKeepaliveModule.forRoot()),

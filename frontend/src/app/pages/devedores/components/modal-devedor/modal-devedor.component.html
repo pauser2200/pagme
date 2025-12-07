@@ -3,26 +3,67 @@
   title="Novo Devedor" 
   (close)="fechar()">
   
-  <form>
+  <form [formGroup]="modalDevedorForm">
+    
     <div class="mb-3">
-      <label class="form-label text-light small">Nome Completo</label>
-      <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Ex: José da Silva">
+      <label class="form-label text-light small">Nome Completo *</label>
+      <input 
+        type="text" 
+        class="form-control bg-dark text-white border-secondary" 
+        [ngClass]="{'is-invalid': modalDevedorForm.get('nome')?.invalid && modalDevedorForm.get('nome')?.touched}"
+        placeholder="Ex: José da Silva"
+        formControlName="nome"> <div class="invalid-feedback">
+        O nome é obrigatório.
+      </div>
     </div>
 
     <div class="row">
       <div class="col-6 mb-3">
-        <label class="form-label text-light small">Telefone</label>
-        <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="(00) 00000-0000">
+        <label class="form-label text-light small">Telefone *</label>
+        <input 
+          type="text" 
+          class="form-control bg-dark text-white border-secondary"
+          [ngClass]="{'is-invalid': modalDevedorForm.get('telefone')?.invalid && modalDevedorForm.get('telefone')?.touched}"
+          placeholder="(00) 00000-0000"
+          formControlName="telefone">
+          
+        <div class="invalid-feedback">
+          Telefone obrigatório.
+        </div>
       </div>
+      
       <div class="col-6 mb-3">
-        <label class="form-label text-light small">Email (Opcional)</label>
-        <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="email@exemplo.com">
+        <label class="form-label text-light small">Email (Login)</label>
+        <input 
+          type="email" 
+          class="form-control bg-dark text-white border-secondary" 
+          [ngClass]="{'is-invalid': modalDevedorForm.get('email')?.invalid && modalDevedorForm.get('email')?.touched}"
+          placeholder="email@exemplo.com"
+          formControlName="email">
+          
+        <div class="invalid-feedback">
+          Formato de email inválido.
+        </div>
       </div>
     </div>
+    
+    <div class="alert alert-dark border-secondary py-2 mb-3">
+      <small class="text-muted">
+        <i class="bi bi-info-circle me-1"></i> 
+        Senha padrão: <strong>mudar123</strong>
+      </small>
+    </div>
 
-    <div class="d-flex justify-content-end gap-2 mt-4">
+    <div class="d-flex justify-content-end gap-2 mt-2">
       <button type="button" class="btn btn-outline-secondary" (click)="fechar()">Cancelar</button>
-      <button type="button" class="btn btn-primary px-4" (click)="salvar()">Salvar</button>
+      
+      <button 
+        type="button" 
+        class="btn btn-primary px-4" 
+        (click)="salvar()"
+        [disabled]="modalDevedorForm.invalid">
+        Salvar
+      </button>
     </div>
   </form>
 

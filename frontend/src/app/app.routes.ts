@@ -12,6 +12,7 @@ export const routes: Routes = [
     path: '', // Rota padrão (ex: http://localhost:4200/)
     component: HomeComponent,
     title: 'Página Inicial',
+    pathMatch: 'full',
     canActivate: [authGuard] // Protege a rota com a guarda de autenticação
   },
   {
@@ -21,9 +22,9 @@ export const routes: Routes = [
     canActivate: [authGuard] // Protege a rota com a guarda de autenticação
   },
   {
-    path: 'sobre', // Rota "Devedores" (ex: .../sobre)
+    path: 'devedores', // Rota "Devedores" (ex: .../sobre)
     component: DevedoresComponent,
-    title: 'Sobre Nós',
+    title: 'Devedores',
     canActivate: [authGuard]
   },
   {
@@ -32,7 +33,6 @@ export const routes: Routes = [
  
   {
     path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
+    redirectTo: '404',
   }
 ];

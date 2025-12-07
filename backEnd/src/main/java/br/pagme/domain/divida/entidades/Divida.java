@@ -1,10 +1,12 @@
-package br.pagme.domain.devedor.entidades;
+package br.pagme.domain.divida.entidades;
 
 import br.pagme.domain.EntidadePersistente;
+import br.pagme.domain.usuario.entidades.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -13,25 +15,28 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@Table(name = "DEV_DEVEDOR")
-@AttributeOverride(name ="id",column = @Column(name = "DEV_ID", columnDefinition = "BIGINT"))
-public class Devedor extends EntidadePersistente<Long> {
+@Table(name = "DIV_DIVIDA")
+@AttributeOverride(name ="id",column = @Column(name = "DIV_ID", columnDefinition = "BIGINT"))
+public class Divida extends EntidadePersistente<Long> {
 
-    @Column(name = "DEV_DS_NOME", nullable = false, columnDefinition = "VARCHAR(20)")
-    private String nome;
+    @Column(name = "DIV_DS_DESCRICAO", nullable = false, columnDefinition = "VARCHAR(255)")
+    private String descricao;
 
-    @Column(name = "DEV_DS_CPF", nullable = false)
-    private String cpf;
+    @Column(name = "DIV_VL_VALOR_TOTAL", nullable = false)
+    private BigDecimal valorTotal;
 
-    @Column(name = "DEV_DS_EMAIL", nullable = false)
-    private String email;
+    @Column(name = "DIV_QTD_PARCELA", nullable = false)
+    private Integer qtdParcelas;
 
-    @Column(name = "DEV_IB_ATIVO", nullable = false)
-    @Builder.Default
-    private boolean ativo = true;
+    @Column(name = "DIV_IB_ATIVO", nullable = false)
+    private Boolean ativo;
 
-    @Column(name = "USU_DH_CRIACAO")
+    @Column(name = "DIV_DH_CRIACAO")
     private LocalDateTime criadoEm;
+
+    @ManyToOne
+    @JoinColumn(name = "USU_ID",  nullable = false)
+    private Usuario devedor;
 
     @PrePersist
     protected void onCreate() {

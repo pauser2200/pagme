@@ -1,4 +1,4 @@
-package br.pagme.domain.usuario.enums;
+package br.pagme.enums;
 
 public enum RolesEnum {
 

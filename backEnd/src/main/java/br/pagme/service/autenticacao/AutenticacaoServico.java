@@ -46,7 +46,6 @@ public class AutenticacaoServico {
                 .expiresAt(now.plus(accessMinutes, ChronoUnit.MINUTES))
                 .subject(usuario.getUsername())   // "sub": quem é o dono do token
                 .claim("roles", roles)
-                .claim("email", usuario.getEmail())
                 .build();
 
         // Assina e retorna o token compacto (JWS)

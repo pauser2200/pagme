@@ -1,14 +1,13 @@
 <div class="container-fluid p-4">
-    
-    <app-page-header 
-        title="Meus Devedores" 
-        subtitle="Gerencie as pessoas que utilizam seus cartões">
-        
+
+    <app-page-header title="Meus Devedores" subtitle="Gerencie as pessoas que utilizam seus cartões">
+
         <button class="btn btn-primary d-flex align-items-center gap-2 shadow-sm" (click)="abrirModal()">
-            <i class="bi bi-person-plus-fill"></i> 
+            <i class="bi bi-person-plus-fill"></i>
             <span class="d-none d-md-inline">Novo Devedor</span>
         </button>
     </app-page-header>
+    <app-alert></app-alert>
 
     <div class="card content-card border-0 shadow-sm">
         <div class="card-body p-0">
@@ -19,17 +18,17 @@
                             <th class="ps-4">Nome</th>
                             <th>Contato</th>
                             <th>Status</th>
-                            <th class="text-end">Total Devido</th>
                             <th class="text-end pe-4">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let devedor of listaDevedores">
-                            
+                        @for (devedor of listaDevedores; track devedor.id){
+                        <tr>
+
                             <td class="ps-4">
                                 <div class="d-flex align-items-center">
-                                    <div class="avatar-circle me-3" 
-                                         [ngClass]="{'bg-danger': devedor.status === 'BLOQUEADO', 'bg-primary': devedor.status !== 'BLOQUEADO'}">
+                                    <div class="avatar-circle me-3"
+                                        [ngClass]="{'bg-danger': devedor.status === 'BLOQUEADO', 'bg-primary': devedor.status !== 'BLOQUEADO'}">
                                         {{ devedor.nome.charAt(0) }}
                                     </div>
                                     <div>
@@ -40,39 +39,49 @@
                             </td>
 
                             <td class="ps-4">
-                                @if(devedor.telefone){<div><i class="bi bi-whatsapp me-2 text-success"></i>{{ devedor.telefone }}</div>}
-                                @if(devedor.email){<div class="small"><i class="bi bi-envelope me-2"></i>{{ devedor.email }}</div>}
+                                @if(devedor.telefone){<div><i class="bi bi-whatsapp me-2 text-success"></i>{{
+                                    devedor.telefone }}</div>}
+                                @if(devedor.email){<div class="small"><i class="bi bi-envelope me-2"></i>{{
+                                    devedor.email }}</div>}
                                 @if(!devedor.telefone && !devedor.email){<div>---</div>}
                             </td>
 
                             <td>
-                               <app-status-badge [status]="devedor.status"></app-status-badge>
+                                <app-status-badge [status]="devedor.status"></app-status-badge>
                             </td>
 
-                            <td class="text-end fw-bold text-white">
-                                {{ devedor.totalDevido | currency:'BRL' }}
-                            </td>
+
 
                             <td class="text-end pe-4">
                                 <button class="btn btn-icon btn-sm text-info me-2" title="Editar">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
-                                <button class="btn btn-icon btn-sm text-danger" title="Excluir">
+                                @if(devedor.status === 'ATIVO'){
+                                <button class="btn btn-icon btn-sm text-danger" title="Excluir"
+                                    (click)="prepararExclusao(devedor)">
                                     <i class="bi bi-trash"></i>
                                 </button>
+                                }
                             </td>
 
                         </tr>
+                        }
                     </tbody>
                 </table>
             </div>
-            
-            <div *ngIf="listaDevedores.length === 0" class="text-center py-5">
+            @if(listaDevedores.length === 0){
+            <div class="text-center py-5">
                 <i class="bi bi-people text-muted fs-1"></i>
                 <p class="text-muted mt-2">Nenhum devedor cadastrado.</p>
             </div>
+            }
         </div>
     </div>
 </div>
 
-<app-modal-devedor [(visible)]="showModal"></app-modal-devedor>
+<app-modal-devedor [(visible)]="showModal" (onSalvar)="carregarDados()"></app-modal-devedor>
+<app-modal-confirmacao [(visible)]="showModalExclusao" titulo="Excluir Devedor"
+    [mensagem]="'Tem certeza que deseja remover ' + (devedorParaExcluir?.nome || 'este item') + '?'"
+    subtitulo="O histórico será mantido, mas o acesso será bloqueado." textoBotaoConfirmar="Inativar"
+    (onConfirmar)="efetivarExclusao()">
+</app-modal-confirmacao>

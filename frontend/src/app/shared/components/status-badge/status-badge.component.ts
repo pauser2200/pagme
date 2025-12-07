@@ -20,9 +20,6 @@ export class StatusBadgeComponent {
         return 'bg-success-subtle text-success border-success-subtle';
       
       case 'INATIVO':
-        return 'bg-secondary-subtle text-secondary border-secondary-subtle';
-      
-      case 'BLOQUEADO':
         return 'bg-danger-subtle text-danger border-danger-subtle';
       
       case 'PENDENTE': // Exemplo extra se precisar no futuro

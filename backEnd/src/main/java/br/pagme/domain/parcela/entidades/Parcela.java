@@ -1,12 +1,14 @@
-package br.pagme.domain.cartao.entidades;
+package br.pagme.domain.parcela.entidades;
 
 import br.pagme.domain.EntidadePersistente;
+import br.pagme.domain.divida.entidades.Divida;
 import br.pagme.domain.usuario.entidades.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -15,29 +17,28 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@Table(name = "CRT_CARTAO")
-@AttributeOverride(name ="id",column = @Column(name = "CRT_ID", columnDefinition = "BIGINT"))
-public class Cartao extends EntidadePersistente<Long> {
+@Table(name = "PRC_PARCELA")
+@AttributeOverride(name ="id",column = @Column(name = "PRC_ID", columnDefinition = "BIGINT"))
+public class Parcela extends EntidadePersistente<Long> {
 
-    @Column(name = "DIV_DS_nome", nullable = false, columnDefinition = "VARCHAR(20)")
-    private String nome;
+    @Column(name = "PRC_NU_PARCELA", nullable = false)
+    private Integer qtdParcelas;
 
-    @Column(name = "DIV_QTD_PARCEAS", nullable = false)
-    private Integer diaFechamento;
+    @Column(name = "PRC_VL_PARCELA", nullable = false)
+    private BigDecimal valorParcela;
 
-    @Column(name = "DIV_QTD_PARCEAS", nullable = false)
-    private Integer diaVencimento;
+    @Column(name = "PRC_DT_VENCIMENTO")
+    private LocalDate dataVencimento;
 
-    @Column(name = "DIV_IB_ATIVO", nullable = false)
-    @Builder.Default
+    @Column(name = "PRC_IB_ATIVO", nullable = false)
     private Boolean ativo;
 
-    @Column(name = "DIV_DH_CRIACAO")
+    @Column(name = "PRC_DH_CRIACAO")
     private LocalDateTime criadoEm;
 
-    @ManyToMany
-    @JoinColumn(name = "USU_ID",  nullable = false)
-    private Usuario devedor;
+    @ManyToOne
+    @JoinColumn(name = "DIV_ID",  nullable = false)
+    private Divida divida;
 
     @PrePersist
     protected void onCreate() {

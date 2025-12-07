@@ -1,0 +1,7 @@
+{
+  "/pagme": {
+    "target": "http://127.1.1.1:8000",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

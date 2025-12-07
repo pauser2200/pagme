@@ -38,9 +38,8 @@ spring:
   jpa:
     open-in-view: false
     defer-datasource-initialization: false
-    # Configuração Padrão do Spring (Recomendada)
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         globally_quoted_identifiers: false

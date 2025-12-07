@@ -1,14 +1,15 @@
-package br.pagme.repository.usuario;
+package br.pagme.repository.divida;
 
-import br.pagme.domain.usuario.entidades.Usuario;
+import br.pagme.domain.divida.entidades.Divida;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+public interface DividaRepository extends JpaRepository<Divida, Long> {
 
-    Optional<Usuario> findByUsername(String username);
+     List<Divida> findByDevedorId(@PathVariable("devedorId") Long devedorId);
 
 }

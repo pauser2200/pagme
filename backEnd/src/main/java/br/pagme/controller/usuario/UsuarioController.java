@@ -13,26 +13,26 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/usuarios")
+@RequestMapping(value = "/devedores")
 public class UsuarioController {
 
 
     private final UsuarioService service;
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasAnyAuthority('ADMIN','BASIC')")
+    @GetMapping(value = "/listar", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<List<UsuarioResources>> listar() {
         return ResponseEntity.ok(service.listar());
     }
 
     @PostMapping(value = "/")
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<UsuarioResources> salvar(@RequestBody UsuarioResources body) {
         return ResponseEntity.ok(service.salvar(body));
     }
 
     @DeleteMapping(value = "/{idUsuario}")
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Void> excluir(@PathVariable Long idUsuario) {
         service.excluir(idUsuario);
         return new ResponseEntity<>(HttpStatus.OK);

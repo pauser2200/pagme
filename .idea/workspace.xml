@@ -4,40 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="feat: &#10;Criado tema do sistema,&#10;Criado Menu de devedores (Mocado),&#10;criado Home (Mocado),&#10;criado modal com form para cadastro de devedor.&#10;&#10;Fix: Ajustando partes do sidebar e do header">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application_prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="3638aabd-fa9c-4252-a970-59713984a8f9" name="Changes" comment="Ajustes">
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/divida/DividaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/divida/resources/DividaResources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/parcela/PercelaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/parcela/resources/ParcelaResources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/divida/entidades/Divida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/parcela/entidades/Parcela.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/parcela/mappers/ParcelaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repository/divida/DividaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repository/parcela/ParcelaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/divida/DividaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/parcela/ParcelaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/pagme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pagme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/GerarSenha.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/GerarSenha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/resources/UsuarioResources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/AuthConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/PasswordConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/UserDetailsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/enums/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/enums/RolesEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/mappers/UsuarioMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/infra/security/WebConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repositpry/usuario/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/repository/usuario/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/autenticacao/AutenticacaoServico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/components/alert.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/resources/application_prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application_prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/core/services/devedor.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/devedor.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/user.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/devedores/components/modal-devedor/modal-devedor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/devedores/components/modal-devedor/modal-devedor.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/devedores/components/modal-devedor/modal-devedor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/devedores/components/modal-devedor/modal-devedor.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/devedores/devedores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/devedores/devedores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/devedores/devedores.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/devedores/devedores.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/components/status-badge/status-badge.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/status-badge/status-badge.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,12 +57,17 @@
     <option name="defaultAccountId" value="c5c544dc-bf5e-40e6-9c73-50e42b297f66" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/divida/entidades/Divida.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/parcela/entidades/Parcela.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/backEnd/src/main/java/br/pagme/domain/usuario/entidades/Usuario.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -66,6 +82,7 @@
     &quot;Application.GerarSenha.executor&quot;: &quot;Debug&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Debug&quot;,
     &quot;Application.WebApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.pagme [clean,install].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -73,7 +90,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/pagme/backEnd/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/pagme/backEnd/src/main/java/br/pagme/controller/parcela&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,7 +110,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\resources" />
+      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\java\br\pagme\controller\parcela" />
+      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\java\br\pagme\domain\cartao" />
+      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\java\br\pagme\domain" />
+      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\java\br\pagme\domain\divida\mappers" />
+      <recent name="D:\Desenvolvimento\pagme\backEnd\src\main\java\br\pagme\controller\divida" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.pagme.enums" />
+      <recent name="br.pagme.controller.divida" />
+      <recent name="br.pagme.service.parcela" />
+      <recent name="br.pagme.domain.parcela.mappers" />
+      <recent name="br.pagme.domain.divida.mappers" />
     </key>
   </component>
   <component name="RunManager" selected="Application.WebApplication">
@@ -162,6 +190,9 @@
       <workItem from="1764417274251" duration="9515000" />
       <workItem from="1764680733691" duration="4393000" />
       <workItem from="1764773417220" duration="594000" />
+      <workItem from="1764856490337" duration="10006000" />
+      <workItem from="1764958139873" duration="12869000" />
+      <workItem from="1765042848557" duration="6170000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustando projeto padrão pagme">
       <option name="closed" value="true" />
@@ -347,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764366824390</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Ajustes">
+      <option name="closed" value="true" />
+      <created>1764857031000</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1764857031000</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +407,24 @@
     <MESSAGE value="Ajustando hibernate" />
     <MESSAGE value="Ajustando hibernate 1" />
     <MESSAGE value="feat: &#10;Criado tema do sistema,&#10;Criado Menu de devedores (Mocado),&#10;criado Home (Mocado),&#10;criado modal com form para cadastro de devedor.&#10;&#10;Fix: Ajustando partes do sidebar e do header" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: &#10;Criado tema do sistema,&#10;Criado Menu de devedores (Mocado),&#10;criado Home (Mocado),&#10;criado modal com form para cadastro de devedor.&#10;&#10;Fix: Ajustando partes do sidebar e do header" />
+    <MESSAGE value="Ajustes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backEnd/src/main/java/br/pagme/service/usuario/UsuarioService.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backEnd/src/main/java/br/pagme/controller/usuario/UsuarioController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

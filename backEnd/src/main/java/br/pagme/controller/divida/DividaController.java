@@ -1,4 +1,4 @@
-package br.pagme.controller.parcela;
+package br.pagme.controller.divida;
 
 import br.pagme.controller.divida.resources.DividaResources;
 import br.pagme.service.divida.DividaService;
@@ -20,8 +20,14 @@ public class DividaController {
     private final DividaService service;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasAnyAuthority('ADMIN','BASIC')")
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
     public ResponseEntity<List<DividaResources>> listar() {
+        return ResponseEntity.ok(service.listar());
+    }
+
+    @GetMapping(value = "/{idDevedor}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    public ResponseEntity<List<DividaResources>> listarPorDevedor(@PathVariable Long idDevedor) {
         return ResponseEntity.ok(service.listar());
     }
 
